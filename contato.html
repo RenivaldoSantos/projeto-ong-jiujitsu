@@ -24,10 +24,35 @@
         </nav>
     </header>
 
-    <main>
+<main>
         <h2>Fale Conosco</h2>
-        <p>Tem alguma dúvida, sugestão ou quer saber mais sobre nosso trabalho? Preencha o formulário abaixo ou entre em contato pelos nossos canais.</p>
+        <p>Tem alguma dúvida, sugestão ou proposta de parceria? Preencha o formulário abaixo ou entre em contato pelos nossos canais.</p>
         
+        <form>
+            <fieldset>
+                <legend>Formulário de Contato</legend>
+
+                <label for="contato-nome">Seu Nome:</label><br>
+                <input type="text" id="contato-nome" name="contato_nome" required><br><br>
+
+                <label for="contato-email">Seu E-mail:</label><br>
+                <input type="email" id="contato-email" name="contato_email" required><br><br>
+
+                <label for="assunto">Assunto:</label><br>
+                <input type="text" id="assunto" name="assunto" required><br><br>
+
+                <label for="mensagem">Sua Mensagem:</label><br>
+                <textarea id="mensagem" name="mensagem" rows="6" required></textarea><br><br>
+
+                <label for="anexo">Anexar um arquivo (opcional):</label><br>
+                <input type="file" id="anexo" name="anexo"><br><br>
+
+                <button type="submit">Enviar Mensagem</button>
+            </fieldset>
+        </form>
+        
+        <hr>
+
         <p><strong>Email:</strong> contato@jiujitsusalvandovidas.org</p>
         <p><strong>Telefone:</strong> (11) 99999-8888 (WhatsApp)</p>
     </main>

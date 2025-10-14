@@ -26,11 +26,60 @@
 
     <main>
         <h2>Conheça Nossos Projetos</h2>
-        <p>Aqui vamos detalhar os projetos sociais desenvolvidos pela ONG.</p>
         <p>Atualmente, oferecemos o projeto 'Tatame do Futuro', com aulas de jiu-jitsu, e o projeto 'English for Champs', com aulas de inglês, ambos gratuitos para crianças e adolescentes da comunidade.</p>
+        
+        <hr>
+
+        <h3>Inscreva-se em um Projeto</h3>
+        <p>Se você é pai, mãe ou responsável e deseja inscrever uma criança em um de nossos projetos, preencha o formulário abaixo.</p>
+
+        <form>
+            <fieldset>
+                <legend>Formulário de Inscrição</legend>
+
+                <label for="nome-crianca">Nome Completo da Criança:</label><br>
+                <input type="text" id="nome-crianca" name="nome_crianca" required><br><br>
+
+                <label for="email-responsavel">Seu E-mail para Contato:</label><br>
+                <input type="email" id="email-responsavel" name="email_responsavel" required><br><br>
+
+                <label for="projeto-interesse">Qual projeto tem interesse?</label><br>
+                <select id="projeto-interesse" name="projeto_interesse">
+                    <option value="jiujitsu">Tatame do Futuro (Jiu-Jitsu)</option>
+                    <option value="ingles">English for Champs (Inglês)</option>
+                    <option value="ambos">Ambos os Projetos</option>
+                </select><br><br>
+
+                <label for="motivacao">Por que você gostaria de inscrever a criança neste projeto? (Motivação)</label><br>
+                <textarea id="motivacao" name="motivacao" rows="5" required></textarea><br><br>
+
+                <label for="experiencia">A criança tem alguma experiência prévia? (Opcional)</label><br>
+                <textarea id="experiencia" name="experiencia" rows="3"></textarea><br><br>
+
+                <button type="submit">Enviar Inscrição</button>
+            </fieldset>
+        </form>
     </main>
 
-    <footer>
+<footer>
+        <hr>
+        <h4>Fique por dentro das novidades!</h4>
+        <p>Assine nossa newsletter para receber notícias, resultados e histórias inspiradoras diretamente no seu e-mail.</p>
+        
+        <form>
+            <label for="newsletter-email">Seu melhor e-mail:</label><br>
+            <input type="email" id="newsletter-email" name="newsletter_email" required><br><br>
+            
+            <p>Tenho interesse em:</p>
+            <input type="checkbox" id="pref-noticias" name="preferencia" value="noticias">
+            <label for="pref-noticias">Notícias e Eventos da ONG</label><br>
+            <input type="checkbox" id="pref-resultados" name="preferencia" value="resultados">
+            <label for="pref-resultados">Resultados de Campeonatos</label><br><br>
+
+            <button type="submit">Inscrever-se</button>
+        </form>
+
+        <hr>
         <p>Contato: contato@jiujitsusalvandovidas.org</p>
     </footer>
 
