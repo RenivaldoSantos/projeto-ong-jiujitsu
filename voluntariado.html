@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -26,25 +26,61 @@
 
     <main>
         <h2>Junte-se a Nós e Faça a Diferença!</h2>
-        <p>Sua ajuda é fundamental para continuarmos transformando vidas. Existem diversas maneiras de fazer parte da nossa família e contribuir com o futuro dos nossos pequenos atletas.</p>
+        <p>Sua ajuda é fundamental para continuarmos transformando vidas. Preencha o formulário abaixo para se cadastrar como um voluntário em nossa ONG.</p>
 
-        <h3>Voluntariado de Tempo e Habilidade</h3>
-        <p>Doe seu tempo e conhecimento para nos ajudar no dia a dia. Estamos sempre em busca de:</p>
-        <ul>
-            <li>Instrutores de Jiu-Jitsu (Faixa Roxa ou superior)</li>
-            <li>Professores de Inglês</li>
-            <li>Apoio em eventos e competições</li>
-        </ul>
-        <p>Se você tem uma dessas habilidades, preencha nosso formulário de cadastro de voluntário!</p>
-        <hr> <h3>Apadrinhe um Atleta</h3>
-        <p><strong>Esta é uma das formas mais especiais de ajudar!</strong> Todas as crianças recebem nosso apoio, mas aquelas que se destacam em treinos e competições precisam de um suporte extra para irem mais longe.</p>
-        <p>Ao "adotar" um aluno, você se torna um padrinho ou madrinha, ajudando diretamente com custos como:</p>
-        <ul>
-            <li>Aquisição de kimonos novos.</li>
-            <li>Inscrição em campeonatos e viagens.</li>
-            <li>Material de estudo para a escola e para as aulas de inglês.</li>
-        </ul>
-        <p>O apadrinhamento cria um laço direto e permite que você acompanhe de perto a evolução do atleta que está ajudando. Para saber mais, entre em contato conosco!</p>
+        <h3>Formulário de Cadastro de Voluntário</h3>
+
+        <form>
+            <fieldset>
+                <legend>Dados Pessoais</legend>
+
+                <label for="nome">Nome Completo:</label><br>
+                <input type="text" id="nome" name="nome_voluntario" required><br><br>
+
+                <label for="email">E-mail:</label><br>
+                <input type="email" id="email" name="email_voluntario" required><br><br>
+
+                <label for="telefone">Telefone (com DDD):</label><br>
+                <input type="tel" id="telefone" name="telefone_voluntario" placeholder="(11) 99999-8888" required><br><br>
+
+                <label for="nascimento">Data de Nascimento:</label><br>
+                <input type="date" id="nascimento" name="data_nascimento" required><br><br>
+            </fieldset>
+
+            <br> <fieldset>
+                <legend>Habilidades e Disponibilidade</legend>
+
+                <p>Quais são suas habilidades? (pode marcar mais de uma)</p>
+                <input type="checkbox" id="habilidade_jiujitsu" name="habilidade" value="jiujitsu">
+                <label for="habilidade_jiujitsu">Instrutor de Jiu-Jitsu</label><br>
+
+                <input type="checkbox" id="habilidade_ingles" name="habilidade" value="ingles">
+                <label for="habilidade_ingles">Professor de Inglês</label><br>
+
+                <input type="checkbox" id="habilidade_eventos" name="habilidade" value="eventos">
+                <label for="habilidade_eventos">Apoio em Eventos</label><br><br>
+
+                <p>Qual seu melhor período? (marque apenas um)</p>
+                <input type="radio" id="periodo_manha" name="periodo" value="manha">
+                <label for="periodo_manha">Manhã</label><br>
+
+                <input type="radio" id="periodo_tarde" name="periodo" value="tarde">
+                <label for="periodo_tarde">Tarde</label><br>
+
+                <input type="radio" id="periodo_noite" name="periodo" value="noite">
+                <label for="periodo_noite">Noite</label><br><br>
+
+            </fieldset>
+
+            <br>
+
+            <button type="submit">Enviar Cadastro</button>
+        </form>
+
+        <hr>
+
+        <h3>Apadrinhe um Atleta</h3>
+        <p><strong>Esta é uma das formas mais especiais de ajudar!</strong> Ao "adotar" um aluno, você se torna um padrinho ou madrinha, ajudando diretamente com custos de kimonos, competições e material de estudo.</p>
         
     </main>
 
