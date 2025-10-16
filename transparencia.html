@@ -24,11 +24,24 @@
         </nav>
     </header>
 
-    <main>
+ <main>
         <h2>Transparência e Prestação de Contas</h2>
-        <p>Acreditamos que a confiança é a base do nosso trabalho. Aqui, você encontrará relatórios financeiros, estatutos e documentos que demonstram como utilizamos cada recurso recebido.</p>
-        <p>Nesta seção, futuramente, teremos links para download dos relatórios anuais e os gráficos de canvas sobre a aplicação das doações que o projeto pede.</p>
+        <p>Acreditamos que a confiança é a base do nosso trabalho. Aqui, você encontrará relatórios e gráficos que demonstram como utilizamos cada recurso recebido.</p>
         
+        <h3>Distribuição de Recursos por Projeto (Gráfico de Pizza)</h3>
+        <canvas id="graficoPizza" width="400" height="400"></canvas>
+        
+        <hr>
+
+        <h3>Evolução de Voluntários (Gráfico de Linha)</h3>
+        <canvas id="graficoLinha" width="600" height="400"></canvas>
+
+        <hr>
+
+        <h3>Impacto Social por Região (Gráfico de Barras)</h3>
+        <canvas id="graficoBarras" width="600" height="400"></canvas>
+
+        <p>Nesta seção, também teremos futuramente links para download dos relatórios anuais.</p>
     </main>
 
 <footer>
@@ -51,6 +64,8 @@
 
         <hr>
         <p>Contato: contato@jiujitsusalvandovidas.org</p>
-    </footer>
+</footer>
+
+    <script src="js/graficos.js" defer></script>
 </body>
 </html>
