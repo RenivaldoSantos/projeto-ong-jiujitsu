@@ -31,7 +31,7 @@
     <hr>
 
  <h3>Galeria de Fotos</h3>
-        <div class="galeria-container">
+   <div class="galeria-container">
             
             <div class="foto">
                 <picture>
@@ -67,11 +67,32 @@
     <h3>Inscreva-se em um Projeto</h3>
     <p>Se você é pai, mãe ou responsável e deseja inscrever uma criança em um de nossos projetos, preencha o formulário abaixo.</p>
 
-    <form>
-        <fieldset>
-            <legend>Formulário de Inscrição</legend>
+<form>
+            <fieldset>
+                <legend>Formulário de Inscrição</legend>
+
+                <label for="nome-crianca">Nome Completo da Criança:</label><br>
+                <input type="text" id="nome-crianca" name="nome_crianca" required><br><br>
+
+                <label for="email-responsavel">Seu E-mail para Contato:</label><br>
+                <input type="email" id="email-responsavel" name="email_responsavel" required><br><br>
+
+                <label for="projeto-interesse">Qual projeto tem interesse?</label><br>
+                <select id="projeto-interesse" name="projeto_interesse">
+                    <option value="jiujitsu">Tatame do Futuro (Jiu-Jitsu)</option>
+                    <option value="ingles">English for Champs (Inglês)</option>
+                    <option value="ambos">Ambos os Projetos</option>
+                </select><br><br>
+
+                <label for="motivacao">Por que você gostaria de inscrever a criança neste projeto? (Motivação)</label><br>
+                <textarea id="motivacao" name="motivacao" rows="5" required></textarea><br><br>
+
+                <label for="experiencia">A criança tem alguma experiência prévia? (Opcional)</label><br>
+                <textarea id="experiencia" name="experiencia" rows="3"></textarea><br><br>
+
+                <button type="submit">Enviar Inscrição</button>
             </fieldset>
-    </form>
+        </form>
 </main>
 
 <footer>
