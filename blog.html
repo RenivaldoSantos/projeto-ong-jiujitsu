@@ -10,7 +10,7 @@
     <header>
         <h1>Jiu Jitsu Salvando Vidas</h1>
         
-        <nav>
+<nav>
             <ul>
                 <li><a href="index.html">Início</a></li>
                 <li><a href="sobre.html">Sobre Nós</a></li>
@@ -20,7 +20,7 @@
                 <li><a href="transparencia.html">Transparência</a></li>
                 <li><a href="contato.html">Contato</a></li>
                 <li><a href="blog.html">Blog</a></li>
-            </ul>
+                <li><a href="cadastro.html">Cadastro</a></li> </ul>
         </nav>
     </header>
 
@@ -46,7 +46,25 @@
 
     </main>
 
-    <footer>
+<footer>
+        <hr>
+        <h4>Fique por dentro das novidades!</h4>
+        <p>Assine nossa newsletter para receber notícias, resultados e histórias inspiradoras diretamente no seu e-mail.</p>
+        
+        <form>
+            <label for="newsletter-email">Seu melhor e-mail:</label><br>
+            <input type="email" id="newsletter-email" name="newsletter_email" required><br><br>
+            
+            <p>Tenho interesse em:</p>
+            <input type="checkbox" id="pref-noticias" name="preferencia" value="noticias">
+            <label for="pref-noticias">Notícias e Eventos da ONG</label><br>
+            <input type="checkbox" id="pref-resultados" name="preferencia" value="resultados">
+            <label for="pref-resultados">Resultados de Campeonatos</label><br><br>
+
+            <button type="submit">Inscrever-se</button>
+        </form>
+
+        <hr>
         <p>Contato: contato@jiujitsusalvandovidas.org</p>
     </footer>
 
