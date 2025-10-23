@@ -72,6 +72,24 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.0.8/inputmask.min.js"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.0.8/inputmask.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Aplica a máscara de CPF ao campo com id="cpf"
+            Inputmask("999.999.999-99").mask(document.getElementById('cpf'));
+
+            // Aplica a máscara de Telefone ao campo com id="telefone"
+            Inputmask("(99) 9999[9]-9999").mask(document.getElementById('telefone'));
+            // O [9] extra torna o 9º dígito opcional (para celular ou fixo)
+
+            // Aplica a máscara de CEP ao campo com id="cep"
+            Inputmask("99999-999").mask(document.getElementById('cep'));
+        });
+    </script>
+
+    <footer>
+        </footer>
     <footer>
         </footer>
 
