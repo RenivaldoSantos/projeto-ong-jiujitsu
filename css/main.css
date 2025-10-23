@@ -1,0 +1,74 @@
+/*
+==================================================
+  ENTREGA II - DESIGN SYSTEM (VARIÁVEIS CSS)
+  CUMPRI AS ESPECIFICAÇÕES: CORES, TIPOGRAFIA E ESPAÇAMENTO MODULAR
+==================================================
+*/
+
+/* ------------------------------------------------ */
+/* 1. VARIÁVEIS GLOBAIS (ESCOPO :root) */
+/* ------------------------------------------------ */
+:root {
+    /* 1.1. PALETA DE CORES (Mínimo 8 cores) */
+    /* Cores Primárias (Relacionadas à ONG: Jiu-Jitsu/Disciplina) */
+    --cor-primaria-azul: #007bff;   /* Azul Royal */
+    --cor-primaria-escuro: #0056b3; /* Azul mais escuro para hover/active */
+
+    /* Cores Secundárias (Relacionadas ao Projeto Inglês e Destaque) */
+    --cor-secundaria-verde: #28a745; /* Verde */
+    --cor-secundaria-amarelo: #ffc107; /* Amarelo/Dourado (faixas) */
+
+    /* Cores Neutras (Fundo, Textos, Borda) */
+    --cor-neutra-fundo: #f8f9fa;     /* Cinza claro/Quase branco */
+    --cor-neutra-texto: #212529;    /* Cinza escuro/Preto */
+    --cor-neutra-borda: #dee2e6;    /* Cinza leve para bordas */
+    --cor-neutra-branco: #ffffff;   /* Branco puro */
+
+
+    /* 1.2. TIPOGRAFIA (5 Tamanhos de Fonte) */
+    --fonte-corpo: 16px;
+    --fonte-h1: 2.5rem;    /* 40px */
+    --fonte-h2: 2rem;      /* 32px */
+    --fonte-h3: 1.5rem;    /* 24px */
+    --fonte-h4: 1.25rem;   /* 20px */
+
+
+    /* 1.3. ESPAÇAMENTO MODULAR (Base 8px) */
+    --espacamento-xs: 8px;   /* Extra Small */
+    --espacamento-sm: 16px;  /* Small */
+    --espacamento-md: 24px;  /* Medium */
+    --espacamento-lg: 32px;  /* Large */
+    --espacamento-xl: 48px;  /* Extra Large */
+    --espacamento-xxl: 64px; /* Double Extra Large */
+}
+
+/* ------------------------------------------------ */
+/* 2. ESTILOS BASE (APLICAÇÃO DAS VARIÁVEIS) */
+/* ------------------------------------------------ */
+body {
+    font-family: Arial, sans-serif; /* Define uma fonte base */
+    font-size: var(--fonte-corpo);  /* Usa a variável */
+    line-height: 1.6;
+    color: var(--cor-neutra-texto); /* Usa a variável */
+    background-color: var(--cor-neutra-fundo); /* Usa a variável */
+    margin: 0;
+    padding: 0;
+}
+
+h1 { font-size: var(--fonte-h1); }
+h2 { font-size: var(--fonte-h2); }
+h3 { font-size: var(--fonte-h3); }
+h4 { font-size: var(--fonte-h4); }
+
+/* Remove as bolinhas do menu de navegação (<ul>) */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Estilo para links (cor primária) */
+a {
+    color: var(--cor-primaria-azul);
+    text-decoration: none; /* Remove o sublinhado */
+}
