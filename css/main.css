@@ -72,3 +72,70 @@ a {
     color: var(--cor-primaria-azul);
     text-decoration: none; /* Remove o sublinhado */
 }
+/* ------------------------------------------------ */
+/* 3. LEIAUTE PRINCIPAL COM CSS GRID */
+/* ------------------------------------------------ */
+
+.container {
+    /* Define o container como uma grade (Grid) */
+    display: grid;
+    /* Define a estrutura das linhas: Header, Main e Footer */
+    grid-template-rows: auto 1fr auto;
+    /* Define as colunas: 1 coluna de largura total */
+    grid-template-columns: 1fr;
+    /* Altura mínima para ocupar a tela inteira, se o conteúdo for pequeno */
+    min-height: 100vh;
+}
+
+header {
+    /* Ocupa a primeira linha da grade */
+    grid-row: 1;
+}
+
+main {
+    /* Ocupa a segunda linha da grade e cresce para preencher o espaço disponível */
+    grid-row: 2;
+    padding: var(--espacamento-lg); /* Usa a variável de espaçamento */
+}
+
+footer {
+    /* Ocupa a terceira linha da grade */
+    grid-row: 3;
+    background-color: var(--cor-neutra-texto); /* Fundo escuro */
+    color: var(--cor-neutra-branco); /* Texto claro */
+    padding: var(--espacamento-lg);
+    text-align: center;
+}
+
+/* ------------------------------------------------ */
+/* 4. LEIAUTE DE COMPONENTES COM FLEXBOX (HEADER/NAV) */
+/* ------------------------------------------------ */
+
+header {
+    background-color: var(--cor-neutra-branco);
+    border-bottom: 1px solid var(--cor-neutra-borda);
+    padding: var(--espacamento-sm) var(--espacamento-lg);
+
+    /* Flexbox para alinhar o Título e o Menu */
+    display: flex;
+    justify-content: space-between; /* Espaça o título do menu */
+    align-items: center; /* Alinha verticalmente */
+}
+
+nav ul {
+    /* Flexbox para dispor os links do menu lado a lado */
+    display: flex;
+    gap: var(--espacamento-sm); /* Usa a variável para espaçar os links */
+}
+
+/* Estilo dos links dentro do menu */
+nav a {
+    /* Cor Primária para os links */
+    color: var(--cor-primaria-azul);
+    padding: var(--espacamento-xs);
+    transition: color 0.3s; /* Transição suave de cores (para o hover) */
+}
+
+nav a:hover {
+    color: var(--cor-primaria-escuro); /* Usa a variável de cor escura para o hover */
+}

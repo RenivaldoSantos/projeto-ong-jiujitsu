@@ -4,68 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Transparência - ONG Jiu Jitsu Salvando Vidas</title>
+    <link rel="stylesheet" href="css/main.css"> <!-- LINK CSS CORRIGIDO -->
 </head>
 <body>
-
-    <header>
-        <h1>Jiu Jitsu Salvando Vidas</h1>
+    <div class="container"> <!-- DIV CONTAINER ADICIONADA -->
         
-<nav>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="sobre.html">Sobre Nós</a></li>
-                <li><a href="projetos.html">Projetos</a></li>
-                <li><a href="voluntariado.html">Seja um Voluntário</a></li>
-                <li><a href="doacoes.html">Doações</a></li>
-                <li><a href="transparencia.html">Transparência</a></li>
-                <li><a href="contato.html">Contato</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="cadastro.html">Cadastro</a></li> </ul>
-        </nav>
-    </header>
-
- <main>
-        <h2>Transparência e Prestação de Contas</h2>
-        <p>Acreditamos que a confiança é a base do nosso trabalho. Aqui, você encontrará relatórios e gráficos que demonstram como utilizamos cada recurso recebido.</p>
-        
-        <h3>Distribuição de Recursos por Projeto (Gráfico de Pizza)</h3>
-        <canvas id="graficoPizza" width="300" height="300"></canvas>
-        
-        <hr>
-
-        <h3>Evolução de Voluntários (Gráfico de Linha)</h3>
-        <canvas id="graficoLinha" width="500" height="300"></canvas>
-
-        <hr>
-
-        <h3>Impacto Social por Região (Gráfico de Barras)</h3>
-        <canvas id="graficoBarras" width="500" height="300"></canvas>
-
-        <p>Nesta seção, também teremos futuramente links para download dos relatórios anuais.</p>
-    </main>
-
-<footer>
-        <hr>
-        <h4>Fique por dentro das novidades!</h4>
-        <p>Assine nossa newsletter para receber notícias, resultados e histórias inspiradoras diretamente no seu e-mail.</p>
-        
-        <form>
-            <label for="newsletter-email">Seu melhor e-mail:</label><br>
-            <input type="email" id="newsletter-email" name="newsletter_email" required><br><br>
+        <header>
+            <h1>Jiu Jitsu Salvando Vidas</h1>
             
-            <p>Tenho interesse em:</p>
-            <input type="checkbox" id="pref-noticias" name="preferencia" value="noticias">
-            <label for="pref-noticias">Notícias e Eventos da ONG</label><br>
-            <input type="checkbox" id="pref-resultados" name="preferencia" value="resultados">
-            <label for="pref-resultados">Resultados de Campeonatos</label><br><br>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="sobre.html">Sobre Nós</a></li>
+                    <li><a href="projetos.html">Projetos</a></li>
+                    <li><a href="voluntariado.html">Seja um Voluntário</a></li>
+                    <li><a href="doacoes.html">Doações</a></li>
+                    <li><a href="transparencia.html">Transparência</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="cadastro.html">Cadastro</a></li>
+                </ul> 
+            </nav>
+        </header>
 
-            <button type="submit">Inscrever-se</button>
-        </form>
+        <main>
+            <!-- CONTEÚDO EXCLUSIVO DA PÁGINA TRANSPARÊNCIA.HTML -->
+            <h2>Transparência e Prestação de Contas</h2>
+            <p>Acreditamos que a confiança é a base do nosso trabalho. Aqui, você encontrará relatórios e gráficos que demonstram como utilizamos cada recurso recebido.</p>
+            
+            <h3>Distribuição de Recursos por Projeto (Gráfico de Pizza)</h3>
+            <canvas id="graficoPizza" width="300" height="300"></canvas>
+            
+            <hr>
 
-        <hr>
-        <p>Contato: contato@jiujitsusalvandovidas.org</p>
-</footer>
+            <h3>Evolução de Voluntários (Gráfico de Linha)</h3>
+            <canvas id="graficoLinha" width="500" height="300"></canvas>
 
-    <script src="js/graficos.js" defer></script>
+            <hr>
+
+            <h3>Impacto Social por Região (Gráfico de Barras)</h3>
+            <canvas id="graficoBarras" width="500" height="300"></canvas>
+
+            <p>Nesta seção, também teremos futuramente links para download dos relatórios anuais.</p>
+        </main>
+
+        <footer>
+            <hr>
+            <h4>Fique por dentro das novidades!</h4>
+            <p>Assine nossa newsletter para receber notícias, resultados e histórias inspiradoras diretamente no seu e-mail.</p>
+            
+            <form>
+                <label for="newsletter-email">Seu melhor e-mail:</label><br>
+                <input type="email" id="newsletter-email" name="newsletter_email" required><br><br>
+                
+                <p>Tenho interesse em:</p>
+                <input type="checkbox" id="pref-noticias" name="preferencia" value="noticias"><label for="pref-noticias">Notícias e Eventos da ONG</label><br>
+                <input type="checkbox" id="pref-resultados" name="preferencia" value="resultados"><label for="pref-resultados">Resultados de Campeonatos</label><br><br>
+
+                <button type="submit">Inscrever-se</button>
+            </form>
+
+            <hr>
+            <p>Contato: contato@jiujitsusalvandovidas.org</p>
+        </footer>
+
+    </div> <!-- FECHAMENTO DIV CONTAINER -->
+    <script src="js/graficos.js" defer></script> <!-- LINK JAVASCRIPT AQUI -->
 </body>
 </html>
