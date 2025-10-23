@@ -139,3 +139,45 @@ nav a {
 nav a:hover {
     color: var(--cor-primaria-escuro); /* Usa a variável de cor escura para o hover */
 }
+/* ------------------------------------------------ */
+/* 5. SISTEMA DE GRID (12 COLUNAS) E UTILITÁRIOS */
+/* ------------------------------------------------ */
+
+/* Definição do Grid de 12 colunas */
+.grid-12 {
+    display: grid;
+    /* 12 colunas com espaçamento uniforme */
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--espacamento-sm); 
+    padding: var(--espacamento-lg) var(--espacamento-md);
+}
+
+/* ------------------------------------------------ */
+/* 6. RESPONSIVIDADE E BREAKPOINTS */
+/* ------------------------------------------------ */
+
+/* Estilo Padrão: Mobile-First (aplicado a telas pequenas por padrão) */
+main {
+    /* Em telas muito pequenas, o conteúdo principal tem largura total */
+    grid-column: 1 / -1; /* Ocupa todas as colunas disponíveis */
+}
+
+/* --- Breakpoint 1: Telas Médias (Tablet, a partir de 768px) --- */
+@media (min-width: 768px) {
+    /* No tablet, o corpo principal ganha um pouco de respiro nas laterais */
+    .container {
+        padding: 0 var(--espacamento-lg);
+    }
+    
+    /* No tablet, vamos dividir o main em 8 colunas para dar espaço a uma sidebar no futuro */
+    main {
+        grid-column: 1 / 9; /* Ocupa as primeiras 8 colunas do grid */
+    }
+    
+    /* A galeria de fotos pode começar a se organizar em colunas */
+    .galeria-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Divide em 2 colunas */
+        gap: var(--espacamento-sm);
+    }
+}
