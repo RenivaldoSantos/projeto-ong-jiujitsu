@@ -11,15 +11,15 @@
 :root {
     /* 1.1. PALETA DE CORES (Mínimo 8 cores) */
     /* Cores Primárias (Relacionadas à ONG: Jiu-Jitsu/Disciplina) */
-    --cor-primaria-azul: #007bff;   /* Azul Royal */
-    --cor-primaria-escuro: #0056b3; /* Azul mais escuro para hover/active */
+    --cor-primaria-azul: #007bff;     /* Azul Royal */
+    --cor-primaria-escuro: #0056b3;   /* Azul mais escuro para hover/active */
 
     /* Cores Secundárias (Relacionadas ao Projeto Inglês e Destaque) */
-    --cor-secundaria-verde: #28a745; /* Verde */
+    --cor-secundaria-verde: #28a745;   /* Verde */
     --cor-secundaria-amarelo: #ffc107; /* Amarelo/Dourado (faixas) */
 
     /* Cores Neutras (Fundo, Textos, Borda) */
-    --cor-neutra-fundo: #f8f9fa;     /* Cinza claro/Quase branco */
+    --cor-neutra-fundo: #E6F7FF;     /* AZUL CLARO SUAVE - COR FINAL */
     --cor-neutra-texto: #212529;    /* Cinza escuro/Preto */
     --cor-neutra-borda: #dee2e6;    /* Cinza leve para bordas */
     --cor-neutra-branco: #ffffff;   /* Branco puro */
@@ -130,14 +130,13 @@ nav ul {
 
 /* Estilo dos links dentro do menu */
 nav a {
-    /* Cor Primária para os links */
     color: var(--cor-primaria-azul);
     padding: var(--espacamento-xs);
-    transition: color 0.3s; /* Transição suave de cores (para o hover) */
+    transition: color 0.3s;
 }
 
 nav a:hover {
-    color: var(--cor-primaria-escuro); /* Usa a variável de cor escura para o hover */
+    color: var(--cor-primaria-escuro);
 }
 /* ------------------------------------------------ */
 /* 5. SISTEMA DE GRID (12 COLUNAS) E UTILITÁRIOS */
@@ -146,7 +145,6 @@ nav a:hover {
 /* Definição do Grid de 12 colunas */
 .grid-12 {
     display: grid;
-    /* 12 colunas com espaçamento uniforme */
     grid-template-columns: repeat(12, 1fr);
     gap: var(--espacamento-sm); 
     padding: var(--espacamento-lg) var(--espacamento-md);
@@ -158,29 +156,27 @@ nav a:hover {
 
 /* Estilo Padrão: Mobile-First (aplicado a telas pequenas por padrão) */
 main {
-    /* Em telas muito pequenas, o conteúdo principal tem largura total */
-    grid-column: 1 / -1; /* Ocupa todas as colunas disponíveis */
+    grid-column: 1 / -1;
 }
 
 /* --- Breakpoint 1: Telas Médias (Tablet, a partir de 768px) --- */
 @media (min-width: 768px) {
-    /* No tablet, o corpo principal ganha um pouco de respiro nas laterais */
     .container {
         padding: 0 var(--espacamento-lg);
     }
     
-    /* No tablet, vamos dividir o main em 8 colunas para dar espaço a uma sidebar no futuro */
     main {
-        grid-column: 1 / 9; /* Ocupa as primeiras 8 colunas do grid */
+        grid-column: 1 / 9;
     }
     
     /* A galeria de fotos pode começar a se organizar em colunas */
     .galeria-container {
         display: grid;
-        grid-template-columns: repeat(2, 1fr); /* Divide em 2 colunas */
+        grid-template-columns: repeat(2, 1fr);
         gap: var(--espacamento-sm);
     }
-}/* ------------------------------------------------ */
+}
+/* ------------------------------------------------ */
 /* 8. BOTÕES E ESTADOS DE INTERAÇÃO */
 /* ------------------------------------------------ */
 
@@ -189,7 +185,7 @@ button[type="submit"],
 .btn {
     display: inline-block;
     padding: var(--espacamento-sm) var(--espacamento-md);
-    background-color: var(--cor-primaria-azul); /* Cor primária */
+    background-color: var(--cor-primaria-azul);
     color: var(--cor-neutra-branco);
     border: none;
     border-radius: 4px;
@@ -208,14 +204,14 @@ button[type="submit"]:hover,
 /* Estado FOCUS (após clicar ou ao usar o teclado): Define um contorno */
 button[type="submit"]:focus,
 .btn:focus {
-    outline: 2px solid var(--cor-secundaria-amarelo); /* Contorno amarelo (destaque) */
+    outline: 2px solid var(--cor-secundaria-amarelo);
     outline-offset: 2px;
 }
 
 /* Estado ACTIVE (enquanto o botão está sendo pressionado) */
 button[type="submit"]:active,
 .btn:active {
-    opacity: 0.8; /* Pequena transparência para efeito de clique */
+    opacity: 0.8;
 }
 
 /* Estado DISABLED (para quando um botão estiver desabilitado) */
@@ -236,7 +232,7 @@ input[type="tel"],
 input[type="date"],
 textarea,
 select {
-    width: 100%; /* Largura total */
+    width: 100%;
     padding: var(--espacamento-xs);
     margin-top: 4px;
     margin-bottom: var(--espacamento-sm);
@@ -250,14 +246,14 @@ select {
 input:focus,
 textarea:focus,
 select:focus {
-    border-color: var(--cor-primaria-azul); /* Borda azul ao focar */
-    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25); /* Sombra suave para destaque */
+    border-color: var(--cor-primaria-azul);
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
     outline: none;
 }
 
 /* Validação Visual: Destaca campos obrigatórios que o usuário não preencheu */
 input:required:invalid:not(:focus):not(:placeholder-shown) {
-    border-color: #dc3545; /* Borda vermelha para indicar erro */
+    border-color: #dc3545;
     box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.25);
 }
 
@@ -268,3 +264,23 @@ fieldset {
     margin-bottom: var(--espacamento-lg);
     border-radius: 4px;
 }
+/* ------------------------------------------------ */
+/* 10. ESTILOS DE GALERIA E MÍDIA */
+/* ------------------------------------------------ */
+
+/* Garante que todas as imagens (incluindo as da galeria) ocupem 100% 
+   da largura do elemento que as contém e que nao quebrem o layout. */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Estilo para as caixas da galeria (para ter uma borda, por exemplo) */
+.foto {
+    overflow: hidden;
+    border: 1px solid var(--cor-neutra-borda);
+    border-radius: 4px;
+}
+
+
