@@ -180,4 +180,91 @@ main {
         grid-template-columns: repeat(2, 1fr); /* Divide em 2 colunas */
         gap: var(--espacamento-sm);
     }
+}/* ------------------------------------------------ */
+/* 8. BOTÕES E ESTADOS DE INTERAÇÃO */
+/* ------------------------------------------------ */
+
+/* Estilo Básico para todos os botões de formulário */
+button[type="submit"],
+.btn {
+    display: inline-block;
+    padding: var(--espacamento-sm) var(--espacamento-md);
+    background-color: var(--cor-primaria-azul); /* Cor primária */
+    color: var(--cor-neutra-branco);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s, opacity 0.3s;
+}
+
+/* Estado HOVER (passar o mouse): Escurece o fundo */
+button[type="submit"]:hover,
+.btn:hover {
+    background-color: var(--cor-primaria-escuro); 
+}
+
+/* Estado FOCUS (após clicar ou ao usar o teclado): Define um contorno */
+button[type="submit"]:focus,
+.btn:focus {
+    outline: 2px solid var(--cor-secundaria-amarelo); /* Contorno amarelo (destaque) */
+    outline-offset: 2px;
+}
+
+/* Estado ACTIVE (enquanto o botão está sendo pressionado) */
+button[type="submit"]:active,
+.btn:active {
+    opacity: 0.8; /* Pequena transparência para efeito de clique */
+}
+
+/* Estado DISABLED (para quando um botão estiver desabilitado) */
+button[type="submit"]:disabled,
+.btn:disabled {
+    background-color: var(--cor-neutra-borda); 
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+/* ------------------------------------------------ */
+/* 9. ESTILIZAÇÃO DE FORMULÁRIOS E VALIDAÇÃO VISUAL */
+/* ------------------------------------------------ */
+
+/* Estilo para todos os campos de texto, email, tel, etc. */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+textarea,
+select {
+    width: 100%; /* Largura total */
+    padding: var(--espacamento-xs);
+    margin-top: 4px;
+    margin-bottom: var(--espacamento-sm);
+    border: 1px solid var(--cor-neutra-borda);
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: var(--fonte-corpo);
+}
+
+/* Feedback visual quando o campo estiver em foco */
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--cor-primaria-azul); /* Borda azul ao focar */
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25); /* Sombra suave para destaque */
+    outline: none;
+}
+
+/* Validação Visual: Destaca campos obrigatórios que o usuário não preencheu */
+input:required:invalid:not(:focus):not(:placeholder-shown) {
+    border-color: #dc3545; /* Borda vermelha para indicar erro */
+    box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.25);
+}
+
+/* Estilo do agrupamento de formulário */
+fieldset {
+    border: 1px solid var(--cor-neutra-borda);
+    padding: var(--espacamento-md);
+    margin-bottom: var(--espacamento-lg);
+    border-radius: 4px;
 }
