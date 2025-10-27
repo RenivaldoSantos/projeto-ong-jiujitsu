@@ -4,10 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seja um Voluntário - ONG Jiu Jitsu Salvando Vidas</title>
-    <link rel="stylesheet" href="css/main.css"> </head>
+    <link rel="stylesheet" href="css/main.css">
+</head>
 <body>
-    <div class="container"> <header>
+    <div class="container"> 
+        
+        <header>
             <h1>Jiu Jitsu Salvando Vidas</h1>
+            
+            <button class="menu-hamburguer" id="menu-hamburguer" aria-label="Abrir Menu">
+                <span class="hamburguer-icon"></span>
+            </button>
             
             <nav>
                 <ul>
@@ -83,7 +90,7 @@
 
             <h3>Apadrinhe um Atleta</h3>
             <p><strong>Esta é uma das formas mais especiais de ajudar!</strong> Ao "adotar" um aluno, você se torna um padrinho ou madrinha, ajudando diretamente com custos de kimonos, competições e material de estudo.</p>
-
+            
         </main>
 
         <footer>
@@ -106,5 +113,18 @@
             <p>Contato: contato@jiujitsusalvandovidas.org</p>
         </footer>
 
-    </div> </body>
+    </div> <script>
+        const menuBtn = document.getElementById('menu-hamburguer');
+        const navElement = document.querySelector('nav');
+
+        menuBtn.addEventListener('click', () => {
+            // Alterna a classe 'menu-ativo' no elemento <nav>
+            navElement.classList.toggle('menu-ativo');
+            
+            // Adicionalmente, alterna uma classe no <body> (boa prática de acessibilidade/efeitos visuais)
+            document.body.classList.toggle('body-menu-ativo');
+        });
+    </script>
+    
+</body>
 </html>

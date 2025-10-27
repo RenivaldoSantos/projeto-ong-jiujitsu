@@ -12,6 +12,10 @@
         <header>
             <h1>Jiu Jitsu Salvando Vidas</h1>
             
+            <button class="menu-hamburguer" id="menu-hamburguer" aria-label="Abrir Menu">
+                <span class="hamburguer-icon"></span>
+            </button>
+            
             <nav>
                 <ul>
                     <li><a href="index.html">Início</a></li>
@@ -96,9 +100,8 @@
             <p>Contato: contato@jiujitsusalvandovidas.org</p>
         </footer>
 
-    </div> 
+    </div> <script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.0.8/inputmask.min.js"></script>
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.0.8/inputmask.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Aplica a máscara de CPF ao campo com id="cpf"
@@ -109,6 +112,19 @@
 
             // Aplica a máscara de CEP ao campo com id="cep"
             Inputmask("99999-999").mask(document.getElementById('cep'));
+        });
+    </script>
+    
+    <script>
+        const menuBtn = document.getElementById('menu-hamburguer');
+        const navElement = document.querySelector('nav');
+
+        menuBtn.addEventListener('click', () => {
+            // Alterna a classe 'menu-ativo' no elemento <nav>
+            navElement.classList.toggle('menu-ativo');
+            
+            // Adicionalmente, alterna uma classe no <body> (boa prática de acessibilidade/efeitos visuais)
+            document.body.classList.toggle('body-menu-ativo');
         });
     </script>
 

@@ -12,6 +12,10 @@
         <header>
             <h1>Jiu Jitsu Salvando Vidas</h1>
             
+            <button class="menu-hamburguer" id="menu-hamburguer" aria-label="Abrir Menu">
+                <span class="hamburguer-icon"></span>
+            </button>
+            
             <nav>
                 <ul>
                     <li><a href="index.html">Início</a></li>
@@ -50,7 +54,19 @@
             <hr>
             <p>Contato: contato@jiujitsusalvandovidas.org</p>
         </footer>
+        
+    </div> <script>
+        const menuBtn = document.getElementById('menu-hamburguer');
+        const navElement = document.querySelector('nav');
 
-    </div> 
+        menuBtn.addEventListener('click', () => {
+            // Alterna a classe 'menu-ativo' no elemento <nav>
+            navElement.classList.toggle('menu-ativo');
+            
+            // Adicionalmente, alterna uma classe no <body> (boa prática de acessibilidade/efeitos visuais)
+            document.body.classList.toggle('body-menu-ativo');
+        });
+    </script>
+    
 </body>
 </html>

@@ -3,14 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Transparência - ONG Jiu Jitsu Salvando Vidas</title>
-    <link rel="stylesheet" href="css/main.css"> <!-- LINK CSS CORRIGIDO -->
+    <title>Nossos Projetos - ONG Jiu Jitsu Salvando Vidas</title>
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <div class="container"> <!-- DIV CONTAINER ADICIONADA -->
+    <div class="container"> 
         
         <header>
             <h1>Jiu Jitsu Salvando Vidas</h1>
+            
+            <button class="menu-hamburguer" id="menu-hamburguer" aria-label="Abrir Menu">
+                <span class="hamburguer-icon"></span>
+            </button>
             
             <nav>
                 <ul>
@@ -28,24 +32,73 @@
         </header>
 
         <main>
-            <!-- CONTEÚDO EXCLUSIVO DA PÁGINA TRANSPARÊNCIA.HTML -->
-            <h2>Transparência e Prestação de Contas</h2>
-            <p>Acreditamos que a confiança é a base do nosso trabalho. Aqui, você encontrará relatórios e gráficos que demonstram como utilizamos cada recurso recebido.</p>
-            
-            <h3>Distribuição de Recursos por Projeto (Gráfico de Pizza)</h3>
-            <canvas id="graficoPizza" width="300" height="300"></canvas>
+            <h2>Conheça Nossos Projetos</h2>
+            <p>Atualmente, oferecemos o projeto 'Tatame do Futuro', com aulas de jiu-jitsu, e o projeto 'English for Champs', com aulas de inglês, ambos gratuitos para crianças e adolescentes da comunidade.</p>
             
             <hr>
 
-            <h3>Evolução de Voluntários (Gráfico de Linha)</h3>
-            <canvas id="graficoLinha" width="500" height="300"></canvas>
+            <h3>Galeria de Fotos</h3>
+            <div class="galeria-container grid-12"> 
+                
+                <div class="foto">
+                    <picture>
+                        <source media="(max-width: 600px)" srcset="images/jiujitsu-treino-01.jpg">
+                        <img src="images/jiujitsu-treino-01.jpg" alt="Dois meninos se cumprimentando no tatame antes da luta" loading="lazy">
+                    </picture>
+                </div>
 
-            <hr>
+                <div class="foto">
+                    <picture>
+                        <source media="(max-width: 600px)" srcset="images/jiujitsu-treino-02.jpg">
+                        <img src="images/jiujitsu-treino-02.jpg" alt="Crianças praticando uma técnica de jiu-jitsu no chão" loading="lazy">
+                    </picture>
+                </div>
 
-            <h3>Impacto Social por Região (Gráfico de Barras)</h3>
-            <canvas id="graficoBarras" width="500" height="300"></canvas>
+                <div class="foto">
+                    <picture>
+                        <source media="(max-width: 600px)" srcset="images/aula-ingles.jpg">
+                        <img src="images/aula-ingles.jpg" alt="Menino concentrado durante a aula de inglês da ONG" loading="lazy">
+                    </picture>
+                </div>
 
-            <p>Nesta seção, também teremos futuramente links para download dos relatórios anuais.</p>
+                <div class="foto">
+                    <picture>
+                        <source media="(max-width: 600px)" srcset="images/aluno-saladeaula.jpg">
+                        <img src="images/aluno-saladeaula.jpg" alt="Voluntária ensinando as crianças na sala de aula" loading="lazy">
+                    </picture>
+                </div>
+                
+            </div> <hr>
+
+            <h3>Inscreva-se em um Projeto</h3>
+            <p>Se você é pai, mãe ou responsável e deseja inscrever uma criança em um de nossos projetos, preencha o formulário abaixo.</p>
+
+            <form>
+                <fieldset>
+                    <legend>Formulário de Inscrição</legend>
+
+                    <label for="nome-crianca">Nome Completo da Criança:</label><br>
+                    <input type="text" id="nome-crianca" name="nome_crianca" required><br><br>
+
+                    <label for="email-responsavel">Seu E-mail para Contato:</label><br>
+                    <input type="email" id="email-responsavel" name="email_responsavel" required><br><br>
+
+                    <label for="projeto-interesse">Qual projeto tem interesse?</label><br>
+                    <select id="projeto-interesse" name="projeto_interesse">
+                        <option value="jiujitsu">Tatame do Futuro (Jiu-Jitsu)</option>
+                        <option value="ingles">English for Champs (Inglês)</option>
+                        <option value="ambos">Ambos os Projetos</option>
+                    </select><br><br>
+
+                    <label for="motivacao">Por que você gostaria de inscrever a criança neste projeto? (Motivação)</label><br>
+                    <textarea id="motivacao" name="motivacao" rows="5" required></textarea><br><br>
+
+                    <label for="experiencia">A criança tem alguma experiência prévia? (Opcional)</label><br>
+                    <textarea id="experiencia" name="experiencia" rows="3"></textarea><br><br>
+
+                    <button type="submit">Enviar Inscrição</button>
+                </fieldset>
+            </form>
         </main>
 
         <footer>
@@ -68,7 +121,5 @@
             <p>Contato: contato@jiujitsusalvandovidas.org</p>
         </footer>
 
-    </div> <!-- FECHAMENTO DIV CONTAINER -->
-    <script src="js/graficos.js" defer></script> <!-- LINK JAVASCRIPT AQUI -->
-</body>
+    </div> </body>
 </html>

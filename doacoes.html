@@ -4,10 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Doações - ONG Jiu Jitsu Salvando Vidas</title>
-    <link rel="stylesheet" href="css/main.css"> </head>
+    <link rel="stylesheet" href="css/main.css">
+</head>
 <body>
-    <div class="container"> <header>
+    <div class="container"> 
+        
+        <header>
             <h1>Jiu Jitsu Salvando Vidas</h1>
+            
+            <button class="menu-hamburguer" id="menu-hamburguer" aria-label="Abrir Menu">
+                <span class="hamburguer-icon"></span>
+            </button>
             
             <nav>
                 <ul>
@@ -40,7 +47,7 @@
                 <label for="newsletter-email">Seu melhor e-mail:</label><br>
                 <input type="email" id="newsletter-email" name="newsletter_email" required><br><br>
                 
-                <p>Tenho interesse em:</p>
+                <p>Tenho interesse in:</p>
                 <input type="checkbox" id="pref-noticias" name="preferencia" value="noticias"><label for="pref-noticias">Notícias e Eventos da ONG</label><br>
                 <input type="checkbox" id="pref-resultados" name="preferencia" value="resultados"><label for="pref-resultados">Resultados de Campeonatos</label><br><br>
 
@@ -51,5 +58,18 @@
             <p>Contato: contato@jiujitsusalvandovidas.org</p>
         </footer>
 
-    </div> </body>
+    </div> <script>
+        const menuBtn = document.getElementById('menu-hamburguer');
+        const navElement = document.querySelector('nav');
+
+        menuBtn.addEventListener('click', () => {
+            // Alterna a classe 'menu-ativo' no elemento <nav>
+            navElement.classList.toggle('menu-ativo');
+            
+            // Adicionalmente, alterna uma classe no <body> (boa prática de acessibilidade/efeitos visuais)
+            document.body.classList.toggle('body-menu-ativo');
+        });
+    </script>
+    
+</body>
 </html>

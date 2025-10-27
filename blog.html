@@ -4,12 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog - ONG Jiu Jitsu Salvando Vidas</title>
-    <link rel="stylesheet" href="css/main.css"> </head>
+    <link rel="stylesheet" href="css/main.css">
+</head>
 <body>
     <div class="container"> 
         
         <header>
             <h1>Jiu Jitsu Salvando Vidas</h1>
+            
+            <button class="menu-hamburguer" id="menu-hamburguer" aria-label="Abrir Menu">
+                <span class="hamburguer-icon"></span>
+            </button>
             
             <nav>
                 <ul>
@@ -67,6 +72,18 @@
             <p>Contato: contato@jiujitsusalvandovidas.org</p>
         </footer>
 
-    </div> 
+    </div> <script>
+        const menuBtn = document.getElementById('menu-hamburguer');
+        const navElement = document.querySelector('nav');
+
+        menuBtn.addEventListener('click', () => {
+            // Alterna a classe 'menu-ativo' no elemento <nav>
+            navElement.classList.toggle('menu-ativo');
+            
+            // Adicionalmente, alterna uma classe no <body> (boa prática de acessibilidade/efeitos visuais)
+            document.body.classList.toggle('body-menu-ativo');
+        });
+    </script>
+    
 </body>
 </html>
