@@ -68,7 +68,8 @@
                     </picture>
                 </div>
                 
-            </div> <hr>
+            </div> 
+            <hr>
 
             <h3>Inscreva-se em um Projeto</h3>
             <p>Se você é pai, mãe ou responsável e deseja inscrever uma criança em um de nossos projetos, preencha o formulário abaixo.</p>
@@ -121,5 +122,18 @@
             <p>Contato: contato@jiujitsusalvandovidas.org</p>
         </footer>
 
-    </div> </body>
+    </div> <script>
+        const menuBtn = document.getElementById('menu-hamburguer');
+        const navElement = document.querySelector('nav');
+
+        menuBtn.addEventListener('click', () => {
+            // Alterna a classe 'menu-ativo' no elemento <nav>
+            navElement.classList.toggle('menu-ativo');
+            
+            // Adicionalmente, alterna uma classe no <body> (boa prática de acessibilidade/efeitos visuais)
+            document.body.classList.toggle('body-menu-ativo');
+        });
+    </script>
+    
+</body>
 </html>
