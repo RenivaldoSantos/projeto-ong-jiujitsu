@@ -283,4 +283,38 @@ img {
     border-radius: 4px;
 }
 
+/* ------------------------------------------------ */
+/* 11. ACESSIBILIDADE: MODO ESCURO (Dark Mode) */
+/* ------------------------------------------------ */
 
+/* Ativa o Modo Escuro baseado na configuração do sistema do usuário */
+@media (prefers-color-scheme: dark) {
+    /* Inverte as cores primárias */
+    :root {
+        --cor-neutra-fundo: #121212;     /* Fundo Preto Profundo */
+        --cor-neutra-texto: #f8f9fa;     /* Texto Cinza Claro */
+        --cor-neutra-borda: #444;        /* Borda Escura */
+    }
+
+    body {
+        /* Aplica as novas cores ao corpo */
+        background-color: var(--cor-neutra-fundo);
+        color: var(--cor-neutra-texto);
+    }
+    
+    /* Faz o header e os links se adaptarem */
+    header {
+        background-color: #212529; /* Um cinza mais escuro para o cabeçalho */
+        border-bottom: 1px solid var(--cor-neutra-borda);
+    }
+    
+    nav a {
+        color: var(--cor-secundaria-amarelo); /* Destaque amarelo para links no fundo escuro */
+    }
+    
+    /* Inverte o footer (que já era escuro) para não ficar preto sobre preto */
+    footer {
+        background-color: #000;
+    }
+}
+\
